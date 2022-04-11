@@ -12,7 +12,7 @@
   <!-- header -->
 <div id="header" class="header">
   <div class="inr">
-    <h1><a href="/"><img src="http://daddle.co.kr/static/daddle/img/logo.png" alt="로고" style="width:60px; height:105px;"></a></h1>
+    <h1><a href="/index.html"><img src="http://daddle.co.kr/static/daddle/img/logo.png" style ="width:60px; height: 105px;"  alt="로고"></a></h1>
     <ul>
               <li id="wiredjoiner"><a href="/wiredselect">인터넷 가입</a></li>
       <!-- <li><a href="/">핸드폰샵</a></li> -->
@@ -309,6 +309,7 @@
       .join_outTable{ width: 1000px; background-color: #fff; border-radius: 20px; box-shadow: 0px 10px 10px 0 rgb(0 0 0 / 5%); }
       .join_title{ font-size:36px; font-weight:bold; vertical-align: middle; }
       .join_titleBelow{font-size:12px; font-weight:bold; vertical-align: middle; color: red;}
+      .join_titleBelow1{margin-left:10px; font-size:12px; font-weight:bold; vertical-align: middle; color: red;}
       .join_form{padding: 50px 0 50px 0;}
       .join_tr_height{height:20px}
       .join_innerTable{width:550px; color: #808080;}
@@ -316,6 +317,7 @@
       .join_clause{font-size:16px;}
       .join_input_max{width:440px!important; margin:5px!important; font-size:16px!important; }
       .join_input_1{text-align:right!important; width:148px!important; margin:5px!important; font-size:16px!important; padding-right:20px!important;}
+      .join_input_11{text-align:left !important; width:148px!important; margin:5px!important; font-size:16px!important; padding-left:20px!important;}
       .join_input_2{text-align:right!important; width:74px!important; margin: 5px 5px 5px 25px!important; font-size:16px!important; padding-right:20px!important;}
       .join_input_3 {margin: 0 0 0 10px; font-size:16px;}
       .join_input_4 {width:280px!important; margin:5px!important; font-size:16px!important; vertical-align: middle!important;}
@@ -436,8 +438,20 @@
                                           </td>
                                       </tr>
                                       <tr>
-                                        <td><span class="join_clause">설치일자</span></td>
-                                        <td><input type="text" id="datepicker" class="join_input_4"></td>
+                                        <td><span class="join_clause">설치희망<p>일자 (1지망)</p></span></td>
+                                        <td>
+                                            <input type="text" id="datepicker" class="join_input_11" placeholder="희망 일자 선택">
+                                            <input type="time" style="width: 130px; height: 40px; border-radius: 5px; border: 1px solid #ddd; text-align: center;">
+                                        </td>         
+                                      </tr>
+                                      <tr>
+                                        <td><span class="join_clause">설치희망<p>일자 (2지망)</p></span></td>
+                                        <td>
+                                            <input type="text" id="datepicker" class="join_input_11" placeholder="희망 일자 선택">
+                                            <input type="time" style="width: 130px; height: 40px; border-radius: 5px; border: 1px solid #ddd; text-align: center;">
+                                            <br>
+                                            <span class="join_titleBelow1">2지망 선택까지 부탁드리겠습니다.</span>
+                                        </td>         
                                       </tr>
                                   </tbody>
                               </table>
