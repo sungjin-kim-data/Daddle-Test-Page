@@ -182,17 +182,18 @@
               return false; 
           }
           
-          if( cus_date.value == "" || cus_Time.value == "" ){
-              cus_detailAddress.focus();
-              Swal.fire('1지망 설치희망일자를 입력해 주세요.', '','question')
-              return false; 
-          }
+          if( cus_date.value == "연도-월-일" || cus_Time.value == "-- --:--" ){
+              if( cus_Time.value == "" ){
+                  cus_Time.focus();
+                  Swal.fire('1지망 설치희망일자를 입력해 주세요.', '','question')
+                  return false; 
+              }
 
-          if( cus_dates.value == "" || cus_Times.value == "" ){
-              cus_detailAddress.focus();
-              Swal.fire('2지망 설치희망일자를 입력해 주세요.', '','question')
-              return false; 
-          }
+        //   if( cus_dates.value == "연도-월-일" || cus_Times.value == "--" ){
+        //       cus_Times.focus();
+        //       Swal.fire('2지망 설치희망일자를 입력해 주세요.', '','question')
+        //       return false; 
+        //   }
 
           if( payment_method.value == "자동이체" ){
               if( payment_bankName.value == "" ){
@@ -433,7 +434,7 @@
                                             <input type="date" name="cus_dateTimes" id="datepicker" style="width: 150px; height: 40px; border-radius: 5px; border: 1px solid #ddd; text-align: center; margin-left: 5px;">
                                             <input type="time" name="cus_dateTimes" style="width: 130px; height: 40px; border-radius: 5px; border: 1px solid #ddd; text-align: center;">
                                            <br>
-                                            <span class="join_titleBelow1" style="margin-left:5px;"> 하단에 입력한 정보가 정확하지 않을 경우 신청이 제한될 수 있습니다.</span>
+                                            <span class="join_titleBelow1" style="margin-left:5px;">2지망까지 선택 부탁드리겠습니다.</span>
                                         </td>         
                                       </tr>
                                   </tbody>
