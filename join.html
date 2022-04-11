@@ -1,0 +1,996 @@
+<html lang="ko">
+  <head>
+  <title>알뜰폰 인터넷가입 및 신청정보 | 다뜰, 다 알뜰하게</title>
+  <!-- link -->
+  <link rel="icon" href="/static/daddle/img/favicon.ico" type="image/x-icon">
+  <!-- js -->
+  <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-TM4JQ3S"></script><script src="http://code.jquery.com/jquery-latest.js"></script>  <!-- j쿼리 -->
+  <script type="text/javascript" src="/static/daddle/js/slick.js"></script> <!-- 슬릭 -->
+  <script src="https://developers.kakao.com/sdk/js/kakao.js"></script> <!-- 카카오 api -->
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script><style>.swal2-popup.swal2-toast{box-sizing:border-box;grid-column:1/4!important;grid-row:1/4!important;grid-template-columns:1fr 99fr 1fr;padding:1em;overflow-y:hidden;background:#fff;box-shadow:0 0 1px rgba(0,0,0,.075),0 1px 2px rgba(0,0,0,.075),1px 2px 4px rgba(0,0,0,.075),1px 3px 8px rgba(0,0,0,.075),2px 4px 16px rgba(0,0,0,.075);pointer-events:all}.swal2-popup.swal2-toast>*{grid-column:2}.swal2-popup.swal2-toast .swal2-title{margin:.5em 1em;padding:0;font-size:1em;text-align:initial}.swal2-popup.swal2-toast .swal2-loading{justify-content:center}.swal2-popup.swal2-toast .swal2-input{height:2em;margin:.5em;font-size:1em}.swal2-popup.swal2-toast .swal2-validation-message{font-size:1em}.swal2-popup.swal2-toast .swal2-footer{margin:.5em 0 0;padding:.5em 0 0;font-size:.8em}.swal2-popup.swal2-toast .swal2-close{grid-column:3/3;grid-row:1/99;align-self:center;width:.8em;height:.8em;margin:0;font-size:2em}.swal2-popup.swal2-toast .swal2-html-container{margin:.5em 1em;padding:0;font-size:1em;text-align:initial}.swal2-popup.swal2-toast .swal2-html-container:empty{padding:0}.swal2-popup.swal2-toast .swal2-loader{grid-column:1;grid-row:1/99;align-self:center;width:2em;height:2em;margin:.25em}.swal2-popup.swal2-toast .swal2-icon{grid-column:1;grid-row:1/99;align-self:center;width:2em;min-width:2em;height:2em;margin:0 .5em 0 0}.swal2-popup.swal2-toast .swal2-icon .swal2-icon-content{display:flex;align-items:center;font-size:1.8em;font-weight:700}.swal2-popup.swal2-toast .swal2-icon.swal2-success .swal2-success-ring{width:2em;height:2em}.swal2-popup.swal2-toast .swal2-icon.swal2-error [class^=swal2-x-mark-line]{top:.875em;width:1.375em}.swal2-popup.swal2-toast .swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=left]{left:.3125em}.swal2-popup.swal2-toast .swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=right]{right:.3125em}.swal2-popup.swal2-toast .swal2-actions{justify-content:flex-start;height:auto;margin:0;margin-top:.5em;padding:0 .5em}.swal2-popup.swal2-toast .swal2-styled{margin:.25em .5em;padding:.4em .6em;font-size:1em}.swal2-popup.swal2-toast .swal2-success{border-color:#a5dc86}.swal2-popup.swal2-toast .swal2-success [class^=swal2-success-circular-line]{position:absolute;width:1.6em;height:3em;transform:rotate(45deg);border-radius:50%}.swal2-popup.swal2-toast .swal2-success [class^=swal2-success-circular-line][class$=left]{top:-.8em;left:-.5em;transform:rotate(-45deg);transform-origin:2em 2em;border-radius:4em 0 0 4em}.swal2-popup.swal2-toast .swal2-success [class^=swal2-success-circular-line][class$=right]{top:-.25em;left:.9375em;transform-origin:0 1.5em;border-radius:0 4em 4em 0}.swal2-popup.swal2-toast .swal2-success .swal2-success-ring{width:2em;height:2em}.swal2-popup.swal2-toast .swal2-success .swal2-success-fix{top:0;left:.4375em;width:.4375em;height:2.6875em}.swal2-popup.swal2-toast .swal2-success [class^=swal2-success-line]{height:.3125em}.swal2-popup.swal2-toast .swal2-success [class^=swal2-success-line][class$=tip]{top:1.125em;left:.1875em;width:.75em}.swal2-popup.swal2-toast .swal2-success [class^=swal2-success-line][class$=long]{top:.9375em;right:.1875em;width:1.375em}.swal2-popup.swal2-toast .swal2-success.swal2-icon-show .swal2-success-line-tip{-webkit-animation:swal2-toast-animate-success-line-tip .75s;animation:swal2-toast-animate-success-line-tip .75s}.swal2-popup.swal2-toast .swal2-success.swal2-icon-show .swal2-success-line-long{-webkit-animation:swal2-toast-animate-success-line-long .75s;animation:swal2-toast-animate-success-line-long .75s}.swal2-popup.swal2-toast.swal2-show{-webkit-animation:swal2-toast-show .5s;animation:swal2-toast-show .5s}.swal2-popup.swal2-toast.swal2-hide{-webkit-animation:swal2-toast-hide .1s forwards;animation:swal2-toast-hide .1s forwards}.swal2-container{display:grid;position:fixed;z-index:1060;top:0;right:0;bottom:0;left:0;box-sizing:border-box;grid-template-areas:"top-start     top            top-end" "center-start  center         center-end" "bottom-start  bottom-center  bottom-end";grid-template-rows:minmax(-webkit-min-content,auto) minmax(-webkit-min-content,auto) minmax(-webkit-min-content,auto);grid-template-rows:minmax(min-content,auto) minmax(min-content,auto) minmax(min-content,auto);height:100%;padding:.625em;overflow-x:hidden;transition:background-color .1s;-webkit-overflow-scrolling:touch}.swal2-container.swal2-backdrop-show,.swal2-container.swal2-noanimation{background:rgba(0,0,0,.4)}.swal2-container.swal2-backdrop-hide{background:0 0!important}.swal2-container.swal2-bottom-start,.swal2-container.swal2-center-start,.swal2-container.swal2-top-start{grid-template-columns:minmax(0,1fr) auto auto}.swal2-container.swal2-bottom,.swal2-container.swal2-center,.swal2-container.swal2-top{grid-template-columns:auto minmax(0,1fr) auto}.swal2-container.swal2-bottom-end,.swal2-container.swal2-center-end,.swal2-container.swal2-top-end{grid-template-columns:auto auto minmax(0,1fr)}.swal2-container.swal2-top-start>.swal2-popup{align-self:start}.swal2-container.swal2-top>.swal2-popup{grid-column:2;align-self:start;justify-self:center}.swal2-container.swal2-top-end>.swal2-popup,.swal2-container.swal2-top-right>.swal2-popup{grid-column:3;align-self:start;justify-self:end}.swal2-container.swal2-center-left>.swal2-popup,.swal2-container.swal2-center-start>.swal2-popup{grid-row:2;align-self:center}.swal2-container.swal2-center>.swal2-popup{grid-column:2;grid-row:2;align-self:center;justify-self:center}.swal2-container.swal2-center-end>.swal2-popup,.swal2-container.swal2-center-right>.swal2-popup{grid-column:3;grid-row:2;align-self:center;justify-self:end}.swal2-container.swal2-bottom-left>.swal2-popup,.swal2-container.swal2-bottom-start>.swal2-popup{grid-column:1;grid-row:3;align-self:end}.swal2-container.swal2-bottom>.swal2-popup{grid-column:2;grid-row:3;justify-self:center;align-self:end}.swal2-container.swal2-bottom-end>.swal2-popup,.swal2-container.swal2-bottom-right>.swal2-popup{grid-column:3;grid-row:3;align-self:end;justify-self:end}.swal2-container.swal2-grow-fullscreen>.swal2-popup,.swal2-container.swal2-grow-row>.swal2-popup{grid-column:1/4;width:100%}.swal2-container.swal2-grow-column>.swal2-popup,.swal2-container.swal2-grow-fullscreen>.swal2-popup{grid-row:1/4;align-self:stretch}.swal2-container.swal2-no-transition{transition:none!important}.swal2-popup{display:none;position:relative;box-sizing:border-box;grid-template-columns:minmax(0,100%);width:32em;max-width:100%;padding:0 0 1.25em;border:none;border-radius:5px;background:#fff;color:#545454;font-family:inherit;font-size:1rem}.swal2-popup:focus{outline:0}.swal2-popup.swal2-loading{overflow-y:hidden}.swal2-title{position:relative;max-width:100%;margin:0;padding:.8em 1em 0;color:inherit;font-size:1.875em;font-weight:600;text-align:center;text-transform:none;word-wrap:break-word}.swal2-actions{display:flex;z-index:1;box-sizing:border-box;flex-wrap:wrap;align-items:center;justify-content:center;width:auto;margin:1.25em auto 0;padding:0}.swal2-actions:not(.swal2-loading) .swal2-styled[disabled]{opacity:.4}.swal2-actions:not(.swal2-loading) .swal2-styled:hover{background-image:linear-gradient(rgba(0,0,0,.1),rgba(0,0,0,.1))}.swal2-actions:not(.swal2-loading) .swal2-styled:active{background-image:linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.2))}.swal2-loader{display:none;align-items:center;justify-content:center;width:2.2em;height:2.2em;margin:0 1.875em;-webkit-animation:swal2-rotate-loading 1.5s linear 0s infinite normal;animation:swal2-rotate-loading 1.5s linear 0s infinite normal;border-width:.25em;border-style:solid;border-radius:100%;border-color:#2778c4 transparent #2778c4 transparent}.swal2-styled{margin:.3125em;padding:.625em 1.1em;transition:box-shadow .1s;box-shadow:0 0 0 3px transparent;font-weight:500}.swal2-styled:not([disabled]){cursor:pointer}.swal2-styled.swal2-confirm{border:0;border-radius:.25em;background:initial;background-color:#7066e0;color:#fff;font-size:1em}.swal2-styled.swal2-confirm:focus{box-shadow:0 0 0 3px rgba(112,102,224,.5)}.swal2-styled.swal2-deny{border:0;border-radius:.25em;background:initial;background-color:#dc3741;color:#fff;font-size:1em}.swal2-styled.swal2-deny:focus{box-shadow:0 0 0 3px rgba(220,55,65,.5)}.swal2-styled.swal2-cancel{border:0;border-radius:.25em;background:initial;background-color:#6e7881;color:#fff;font-size:1em}.swal2-styled.swal2-cancel:focus{box-shadow:0 0 0 3px rgba(110,120,129,.5)}.swal2-styled.swal2-default-outline:focus{box-shadow:0 0 0 3px rgba(100,150,200,.5)}.swal2-styled:focus{outline:0}.swal2-styled::-moz-focus-inner{border:0}.swal2-footer{justify-content:center;margin:1em 0 0;padding:1em 1em 0;border-top:1px solid #eee;color:inherit;font-size:1em}.swal2-timer-progress-bar-container{position:absolute;right:0;bottom:0;left:0;grid-column:auto!important;overflow:hidden;border-bottom-right-radius:5px;border-bottom-left-radius:5px}.swal2-timer-progress-bar{width:100%;height:.25em;background:rgba(0,0,0,.2)}.swal2-image{max-width:100%;margin:2em auto 1em}.swal2-close{z-index:2;align-items:center;justify-content:center;width:1.2em;height:1.2em;margin-top:0;margin-right:0;margin-bottom:-1.2em;padding:0;overflow:hidden;transition:color .1s,box-shadow .1s;border:none;border-radius:5px;background:0 0;color:#ccc;font-family:serif;font-family:monospace;font-size:2.5em;cursor:pointer;justify-self:end}.swal2-close:hover{transform:none;background:0 0;color:#f27474}.swal2-close:focus{outline:0;box-shadow:inset 0 0 0 3px rgba(100,150,200,.5)}.swal2-close::-moz-focus-inner{border:0}.swal2-html-container{z-index:1;justify-content:center;margin:1em 1.6em .3em;padding:0;overflow:auto;color:inherit;font-size:1.125em;font-weight:400;line-height:normal;text-align:center;word-wrap:break-word;word-break:break-word}.swal2-checkbox,.swal2-file,.swal2-input,.swal2-radio,.swal2-select,.swal2-textarea{margin:1em 2em 3px}.swal2-file,.swal2-input,.swal2-textarea{box-sizing:border-box;width:auto;transition:border-color .1s,box-shadow .1s;border:1px solid #d9d9d9;border-radius:.1875em;background:inherit;box-shadow:inset 0 1px 1px rgba(0,0,0,.06),0 0 0 3px transparent;color:inherit;font-size:1.125em}.swal2-file.swal2-inputerror,.swal2-input.swal2-inputerror,.swal2-textarea.swal2-inputerror{border-color:#f27474!important;box-shadow:0 0 2px #f27474!important}.swal2-file:focus,.swal2-input:focus,.swal2-textarea:focus{border:1px solid #b4dbed;outline:0;box-shadow:inset 0 1px 1px rgba(0,0,0,.06),0 0 0 3px rgba(100,150,200,.5)}.swal2-file::-moz-placeholder,.swal2-input::-moz-placeholder,.swal2-textarea::-moz-placeholder{color:#ccc}.swal2-file:-ms-input-placeholder,.swal2-input:-ms-input-placeholder,.swal2-textarea:-ms-input-placeholder{color:#ccc}.swal2-file::placeholder,.swal2-input::placeholder,.swal2-textarea::placeholder{color:#ccc}.swal2-range{margin:1em 2em 3px;background:#fff}.swal2-range input{width:80%}.swal2-range output{width:20%;color:inherit;font-weight:600;text-align:center}.swal2-range input,.swal2-range output{height:2.625em;padding:0;font-size:1.125em;line-height:2.625em}.swal2-input{height:2.625em;padding:0 .75em}.swal2-file{width:75%;margin-right:auto;margin-left:auto;background:inherit;font-size:1.125em}.swal2-textarea{height:6.75em;padding:.75em}.swal2-select{min-width:50%;max-width:100%;padding:.375em .625em;background:inherit;color:inherit;font-size:1.125em}.swal2-checkbox,.swal2-radio{align-items:center;justify-content:center;background:#fff;color:inherit}.swal2-checkbox label,.swal2-radio label{margin:0 .6em;font-size:1.125em}.swal2-checkbox input,.swal2-radio input{flex-shrink:0;margin:0 .4em}.swal2-input-label{display:flex;justify-content:center;margin:1em auto 0}.swal2-validation-message{align-items:center;justify-content:center;margin:1em 0 0;padding:.625em;overflow:hidden;background:#f0f0f0;color:#666;font-size:1em;font-weight:300}.swal2-validation-message::before{content:"!";display:inline-block;width:1.5em;min-width:1.5em;height:1.5em;margin:0 .625em;border-radius:50%;background-color:#f27474;color:#fff;font-weight:600;line-height:1.5em;text-align:center}.swal2-icon{position:relative;box-sizing:content-box;justify-content:center;width:5em;height:5em;margin:2.5em auto .6em;border:.25em solid transparent;border-radius:50%;border-color:#000;font-family:inherit;line-height:5em;cursor:default;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.swal2-icon .swal2-icon-content{display:flex;align-items:center;font-size:3.75em}.swal2-icon.swal2-error{border-color:#f27474;color:#f27474}.swal2-icon.swal2-error .swal2-x-mark{position:relative;flex-grow:1}.swal2-icon.swal2-error [class^=swal2-x-mark-line]{display:block;position:absolute;top:2.3125em;width:2.9375em;height:.3125em;border-radius:.125em;background-color:#f27474}.swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=left]{left:1.0625em;transform:rotate(45deg)}.swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=right]{right:1em;transform:rotate(-45deg)}.swal2-icon.swal2-error.swal2-icon-show{-webkit-animation:swal2-animate-error-icon .5s;animation:swal2-animate-error-icon .5s}.swal2-icon.swal2-error.swal2-icon-show .swal2-x-mark{-webkit-animation:swal2-animate-error-x-mark .5s;animation:swal2-animate-error-x-mark .5s}.swal2-icon.swal2-warning{border-color:#facea8;color:#f8bb86}.swal2-icon.swal2-warning.swal2-icon-show{-webkit-animation:swal2-animate-error-icon .5s;animation:swal2-animate-error-icon .5s}.swal2-icon.swal2-warning.swal2-icon-show .swal2-icon-content{-webkit-animation:swal2-animate-i-mark .5s;animation:swal2-animate-i-mark .5s}.swal2-icon.swal2-info{border-color:#9de0f6;color:#3fc3ee}.swal2-icon.swal2-info.swal2-icon-show{-webkit-animation:swal2-animate-error-icon .5s;animation:swal2-animate-error-icon .5s}.swal2-icon.swal2-info.swal2-icon-show .swal2-icon-content{-webkit-animation:swal2-animate-i-mark .8s;animation:swal2-animate-i-mark .8s}.swal2-icon.swal2-question{border-color:#c9dae1;color:#87adbd}.swal2-icon.swal2-question.swal2-icon-show{-webkit-animation:swal2-animate-error-icon .5s;animation:swal2-animate-error-icon .5s}.swal2-icon.swal2-question.swal2-icon-show .swal2-icon-content{-webkit-animation:swal2-animate-question-mark .8s;animation:swal2-animate-question-mark .8s}.swal2-icon.swal2-success{border-color:#a5dc86;color:#a5dc86}.swal2-icon.swal2-success [class^=swal2-success-circular-line]{position:absolute;width:3.75em;height:7.5em;transform:rotate(45deg);border-radius:50%}.swal2-icon.swal2-success [class^=swal2-success-circular-line][class$=left]{top:-.4375em;left:-2.0635em;transform:rotate(-45deg);transform-origin:3.75em 3.75em;border-radius:7.5em 0 0 7.5em}.swal2-icon.swal2-success [class^=swal2-success-circular-line][class$=right]{top:-.6875em;left:1.875em;transform:rotate(-45deg);transform-origin:0 3.75em;border-radius:0 7.5em 7.5em 0}.swal2-icon.swal2-success .swal2-success-ring{position:absolute;z-index:2;top:-.25em;left:-.25em;box-sizing:content-box;width:100%;height:100%;border:.25em solid rgba(165,220,134,.3);border-radius:50%}.swal2-icon.swal2-success .swal2-success-fix{position:absolute;z-index:1;top:.5em;left:1.625em;width:.4375em;height:5.625em;transform:rotate(-45deg)}.swal2-icon.swal2-success [class^=swal2-success-line]{display:block;position:absolute;z-index:2;height:.3125em;border-radius:.125em;background-color:#a5dc86}.swal2-icon.swal2-success [class^=swal2-success-line][class$=tip]{top:2.875em;left:.8125em;width:1.5625em;transform:rotate(45deg)}.swal2-icon.swal2-success [class^=swal2-success-line][class$=long]{top:2.375em;right:.5em;width:2.9375em;transform:rotate(-45deg)}.swal2-icon.swal2-success.swal2-icon-show .swal2-success-line-tip{-webkit-animation:swal2-animate-success-line-tip .75s;animation:swal2-animate-success-line-tip .75s}.swal2-icon.swal2-success.swal2-icon-show .swal2-success-line-long{-webkit-animation:swal2-animate-success-line-long .75s;animation:swal2-animate-success-line-long .75s}.swal2-icon.swal2-success.swal2-icon-show .swal2-success-circular-line-right{-webkit-animation:swal2-rotate-success-circular-line 4.25s ease-in;animation:swal2-rotate-success-circular-line 4.25s ease-in}.swal2-progress-steps{flex-wrap:wrap;align-items:center;max-width:100%;margin:1.25em auto;padding:0;background:inherit;font-weight:600}.swal2-progress-steps li{display:inline-block;position:relative}.swal2-progress-steps .swal2-progress-step{z-index:20;flex-shrink:0;width:2em;height:2em;border-radius:2em;background:#2778c4;color:#fff;line-height:2em;text-align:center}.swal2-progress-steps .swal2-progress-step.swal2-active-progress-step{background:#2778c4}.swal2-progress-steps .swal2-progress-step.swal2-active-progress-step~.swal2-progress-step{background:#add8e6;color:#fff}.swal2-progress-steps .swal2-progress-step.swal2-active-progress-step~.swal2-progress-step-line{background:#add8e6}.swal2-progress-steps .swal2-progress-step-line{z-index:10;flex-shrink:0;width:2.5em;height:.4em;margin:0 -1px;background:#2778c4}[class^=swal2]{-webkit-tap-highlight-color:transparent}.swal2-show{-webkit-animation:swal2-show .3s;animation:swal2-show .3s}.swal2-hide{-webkit-animation:swal2-hide .15s forwards;animation:swal2-hide .15s forwards}.swal2-noanimation{transition:none}.swal2-scrollbar-measure{position:absolute;top:-9999px;width:50px;height:50px;overflow:scroll}.swal2-rtl .swal2-close{margin-right:initial;margin-left:0}.swal2-rtl .swal2-timer-progress-bar{right:0;left:auto}@-webkit-keyframes swal2-toast-show{0%{transform:translateY(-.625em) rotateZ(2deg)}33%{transform:translateY(0) rotateZ(-2deg)}66%{transform:translateY(.3125em) rotateZ(2deg)}100%{transform:translateY(0) rotateZ(0)}}@keyframes swal2-toast-show{0%{transform:translateY(-.625em) rotateZ(2deg)}33%{transform:translateY(0) rotateZ(-2deg)}66%{transform:translateY(.3125em) rotateZ(2deg)}100%{transform:translateY(0) rotateZ(0)}}@-webkit-keyframes swal2-toast-hide{100%{transform:rotateZ(1deg);opacity:0}}@keyframes swal2-toast-hide{100%{transform:rotateZ(1deg);opacity:0}}@-webkit-keyframes swal2-toast-animate-success-line-tip{0%{top:.5625em;left:.0625em;width:0}54%{top:.125em;left:.125em;width:0}70%{top:.625em;left:-.25em;width:1.625em}84%{top:1.0625em;left:.75em;width:.5em}100%{top:1.125em;left:.1875em;width:.75em}}@keyframes swal2-toast-animate-success-line-tip{0%{top:.5625em;left:.0625em;width:0}54%{top:.125em;left:.125em;width:0}70%{top:.625em;left:-.25em;width:1.625em}84%{top:1.0625em;left:.75em;width:.5em}100%{top:1.125em;left:.1875em;width:.75em}}@-webkit-keyframes swal2-toast-animate-success-line-long{0%{top:1.625em;right:1.375em;width:0}65%{top:1.25em;right:.9375em;width:0}84%{top:.9375em;right:0;width:1.125em}100%{top:.9375em;right:.1875em;width:1.375em}}@keyframes swal2-toast-animate-success-line-long{0%{top:1.625em;right:1.375em;width:0}65%{top:1.25em;right:.9375em;width:0}84%{top:.9375em;right:0;width:1.125em}100%{top:.9375em;right:.1875em;width:1.375em}}@-webkit-keyframes swal2-show{0%{transform:scale(.7)}45%{transform:scale(1.05)}80%{transform:scale(.95)}100%{transform:scale(1)}}@keyframes swal2-show{0%{transform:scale(.7)}45%{transform:scale(1.05)}80%{transform:scale(.95)}100%{transform:scale(1)}}@-webkit-keyframes swal2-hide{0%{transform:scale(1);opacity:1}100%{transform:scale(.5);opacity:0}}@keyframes swal2-hide{0%{transform:scale(1);opacity:1}100%{transform:scale(.5);opacity:0}}@-webkit-keyframes swal2-animate-success-line-tip{0%{top:1.1875em;left:.0625em;width:0}54%{top:1.0625em;left:.125em;width:0}70%{top:2.1875em;left:-.375em;width:3.125em}84%{top:3em;left:1.3125em;width:1.0625em}100%{top:2.8125em;left:.8125em;width:1.5625em}}@keyframes swal2-animate-success-line-tip{0%{top:1.1875em;left:.0625em;width:0}54%{top:1.0625em;left:.125em;width:0}70%{top:2.1875em;left:-.375em;width:3.125em}84%{top:3em;left:1.3125em;width:1.0625em}100%{top:2.8125em;left:.8125em;width:1.5625em}}@-webkit-keyframes swal2-animate-success-line-long{0%{top:3.375em;right:2.875em;width:0}65%{top:3.375em;right:2.875em;width:0}84%{top:2.1875em;right:0;width:3.4375em}100%{top:2.375em;right:.5em;width:2.9375em}}@keyframes swal2-animate-success-line-long{0%{top:3.375em;right:2.875em;width:0}65%{top:3.375em;right:2.875em;width:0}84%{top:2.1875em;right:0;width:3.4375em}100%{top:2.375em;right:.5em;width:2.9375em}}@-webkit-keyframes swal2-rotate-success-circular-line{0%{transform:rotate(-45deg)}5%{transform:rotate(-45deg)}12%{transform:rotate(-405deg)}100%{transform:rotate(-405deg)}}@keyframes swal2-rotate-success-circular-line{0%{transform:rotate(-45deg)}5%{transform:rotate(-45deg)}12%{transform:rotate(-405deg)}100%{transform:rotate(-405deg)}}@-webkit-keyframes swal2-animate-error-x-mark{0%{margin-top:1.625em;transform:scale(.4);opacity:0}50%{margin-top:1.625em;transform:scale(.4);opacity:0}80%{margin-top:-.375em;transform:scale(1.15)}100%{margin-top:0;transform:scale(1);opacity:1}}@keyframes swal2-animate-error-x-mark{0%{margin-top:1.625em;transform:scale(.4);opacity:0}50%{margin-top:1.625em;transform:scale(.4);opacity:0}80%{margin-top:-.375em;transform:scale(1.15)}100%{margin-top:0;transform:scale(1);opacity:1}}@-webkit-keyframes swal2-animate-error-icon{0%{transform:rotateX(100deg);opacity:0}100%{transform:rotateX(0);opacity:1}}@keyframes swal2-animate-error-icon{0%{transform:rotateX(100deg);opacity:0}100%{transform:rotateX(0);opacity:1}}@-webkit-keyframes swal2-rotate-loading{0%{transform:rotate(0)}100%{transform:rotate(360deg)}}@keyframes swal2-rotate-loading{0%{transform:rotate(0)}100%{transform:rotate(360deg)}}@-webkit-keyframes swal2-animate-question-mark{0%{transform:rotateY(-360deg)}100%{transform:rotateY(0)}}@keyframes swal2-animate-question-mark{0%{transform:rotateY(-360deg)}100%{transform:rotateY(0)}}@-webkit-keyframes swal2-animate-i-mark{0%{transform:rotateZ(45deg);opacity:0}25%{transform:rotateZ(-25deg);opacity:.4}50%{transform:rotateZ(15deg);opacity:.8}75%{transform:rotateZ(-5deg);opacity:1}100%{transform:rotateX(0);opacity:1}}@keyframes swal2-animate-i-mark{0%{transform:rotateZ(45deg);opacity:0}25%{transform:rotateZ(-25deg);opacity:.4}50%{transform:rotateZ(15deg);opacity:.8}75%{transform:rotateZ(-5deg);opacity:1}100%{transform:rotateX(0);opacity:1}}body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown){overflow:hidden}body.swal2-height-auto{height:auto!important}body.swal2-no-backdrop .swal2-container{background-color:transparent!important;pointer-events:none}body.swal2-no-backdrop .swal2-container .swal2-popup{pointer-events:all}body.swal2-no-backdrop .swal2-container .swal2-modal{box-shadow:0 0 10px rgba(0,0,0,.4)}@media print{body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown){overflow-y:scroll!important}body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown)>[aria-hidden=true]{display:none}body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown) .swal2-container{position:static!important}}body.swal2-toast-shown .swal2-container{box-sizing:border-box;width:360px;max-width:100%;background-color:transparent;pointer-events:none}body.swal2-toast-shown .swal2-container.swal2-top{top:0;right:auto;bottom:auto;left:50%;transform:translateX(-50%)}body.swal2-toast-shown .swal2-container.swal2-top-end,body.swal2-toast-shown .swal2-container.swal2-top-right{top:0;right:0;bottom:auto;left:auto}body.swal2-toast-shown .swal2-container.swal2-top-left,body.swal2-toast-shown .swal2-container.swal2-top-start{top:0;right:auto;bottom:auto;left:0}body.swal2-toast-shown .swal2-container.swal2-center-left,body.swal2-toast-shown .swal2-container.swal2-center-start{top:50%;right:auto;bottom:auto;left:0;transform:translateY(-50%)}body.swal2-toast-shown .swal2-container.swal2-center{top:50%;right:auto;bottom:auto;left:50%;transform:translate(-50%,-50%)}body.swal2-toast-shown .swal2-container.swal2-center-end,body.swal2-toast-shown .swal2-container.swal2-center-right{top:50%;right:0;bottom:auto;left:auto;transform:translateY(-50%)}body.swal2-toast-shown .swal2-container.swal2-bottom-left,body.swal2-toast-shown .swal2-container.swal2-bottom-start{top:auto;right:auto;bottom:0;left:0}body.swal2-toast-shown .swal2-container.swal2-bottom{top:auto;right:auto;bottom:0;left:50%;transform:translateX(-50%)}body.swal2-toast-shown .swal2-container.swal2-bottom-end,body.swal2-toast-shown .swal2-container.swal2-bottom-right{top:auto;right:0;bottom:0;left:auto}</style> <!-- 스윗 alert -->
+  <!-- //js -->
+  <!-- header -->
+<div id="header" class="header">
+  <div class="inr">
+    <h1><a href="/"><img src="http://daddle.co.kr/static/daddle/img/logo.png" alt="로고" style="width:60px; height:105px;"></a></h1>
+    <ul>
+              <li id="wiredjoiner"><a href="/wiredselect">인터넷 가입</a></li>
+      <!-- <li><a href="/">핸드폰샵</a></li> -->
+      <li><a href="javascript:checkLoginNQNA()">Q&amp;A</a></li>
+              <li id="klogin" style="display: inline-block;"><a href="/login?next=/wiredjoin">로그인</a></li>
+              <li id="klogout" style="display: none;"><a href="javascript:logoutWithKakao()">로그아웃</a></li>
+    </ul>
+  </div>
+  </div>
+  <script>
+      Kakao.init('47caa715166ae37dd954e11727ec776f');
+      console.log(Kakao.isInitialized());
+      var loggedId;
+
+      showLoginState();
+      function showLoginState(){
+          if (Kakao.Auth.getAccessToken()) {
+              Kakao.API.request({
+                  url: '/v2/user/me',
+                  success: function (response) {
+                      console.log("getAccessToken ok")
+                      console.log(response)
+                      welcomeUser(response.id);
+                  },
+                  fail: function (error) {
+                      console.log("getAccessToken no")
+                      console.log(error)
+                  },
+              })
+          }else{
+              byeUser();
+          }
+      }
+      
+      function logoutWithKakao(){
+          if (!Kakao.Auth.getAccessToken()){ return; }
+          Kakao.Auth.logout(function() {
+              showLoginState();
+              console.log(document.location.href)
+              if(document.location.href.includes( '/gift?' )){
+                  window.location = "/";
+              }
+              if(document.location.href.includes( '/confirmaddr?' )){
+                  window.location = "/";
+              }
+              if(document.location.href.includes( '/qnalist' )){
+                  window.location = "/";
+              }
+              if(document.location.href.includes( '/qnaview/' )){
+                  window.location = "/";
+              }
+              if(document.location.href.includes( '/qnamodi/' )){
+                  window.location = "/";
+              }
+              if(document.location.href.includes( '/qnawrite?' )){
+                  window.location = "/";
+              }
+          });
+      }
+      
+      function welcomeUser(kid){
+          loggedId = kid
+          $('#klogin').css("display", "none");
+          $('#klogout').css("display", "inline-block");
+      }
+
+      function byeUser(){
+          loggedId = ""
+          console.log("byeUser")
+          $('#klogin').css("display", "inline-block");
+          $('#klogout').css("display", "none");
+      }
+
+      function checkLoginNQNA(){
+          if (Kakao.Auth.getAccessToken()) {
+              Kakao.API.request({
+                  url: '/v2/user/me',
+                  success: function (response) {
+                      location.href="/qnalist";
+                  },
+                  fail: function (error) {
+                      location.href="/login?next=qnalist";
+                  },
+              })
+          }else{
+              location.href="/login?next=qnalist";
+          }
+      }
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.js" charset = "UTF-8"></script>
+  <link
+  rel="stylesheet"
+  href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+  />
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $(function () {
+  $("#datepicker").datepicker({ dateFormat: "yy-mm-dd" });
+  });
+  </script>
+  <script>
+    $.datepicker.setDefaults({
+    dateFormat: 'yy-mm-dd',
+    prevText: '이전 달',
+    nextText: '다음 달',
+    monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+    monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+    dayNames: ['일', '월', '화', '수', '목', '금', '토'],
+    dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],
+    dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+    showMonthAfterYear: true,
+    yearSuffix: '년'
+  });
+  $(function() {
+    $("#datepicker").datepicker();
+  });
+  </script>
+  <link rel="stylesheet" href="./main.css">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./reset.css">
+  <!-- //header -->
+  <!-- block content -->
+  
+  <!-- prevent refresh post-->
+  <script>
+      if ( window.history.replaceState ) {
+          window.history.replaceState( null, null, window.location.href );
+      }
+  </script>
+  <!-- //prevent refresh post-->
+  <!-- postcode -->
+  <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+  <script>
+      function kakaopost() {
+          new daum.Postcode({
+              oncomplete: function(data) {
+                  document.querySelector("#cus_zipcode").value = data.zonecode;
+                  document.querySelector("#cus_zipAddress").value = data.address;
+              }
+          }).open();
+      }
+  </script>
+  <!-- //postcode -->
+  <!-- check and order -->
+  <script>
+      function onlyNumber(){
+          if((event.keyCode >= 48 && event.keyCode <= 57 )
+              || event.keyCode == 8 //backspace
+              || event.keyCode == 37 || event.keyCode == 39 //방향키 →, ←
+              || event.keyCode == 46 //delete키
+              || event.keyCode == 39){
+          }else{
+              event.returnValue=false;
+          }
+      }
+  function checkNOrder(){
+          if(!$('#add_agreement').is(':checked')){
+              add_agreement.focus();
+              Swal.fire('개인정보 수집 및 이용에 동의해 주세요.', '','warning')
+              return false; 
+          }
+          if( cus_name.value == "" ){
+              cus_name.focus();
+              Swal.fire('고객명을 입력해 주세요.', '','question')
+              return false; 
+          }
+          if( cus_birthYear.value == "" || cus_birthMonth.value == "" || cus_birthDate.value == ""){
+              cus_birthYear.focus();
+              Swal.fire('생년월일을 입력해 주세요.', '','question')
+              return false; 
+          }
+          if( cus_telPhone.value == "" ){
+              cus_telPhone.focus();
+              Swal.fire('휴대폰을 입력해 주세요.', '','question')
+              return false; 
+          }
+          if( cus_tcom.value == "" ){
+              cus_tcom.focus();
+              Swal.fire('휴대폰 통신사를 선택해 주세요.', '','question')
+              return false; 
+          }
+          if( cus_homePhone.value == "" ){
+              cus_homePhone.focus();
+              Swal.fire('일반전화를 입력해 주세요.', '','question')
+              return false; 
+          }
+          if( cus_email.value == "" ){
+              cus_email.focus();
+              Swal.fire('이메일을 입력해 주세요.', '','question')
+              return false; 
+          }
+          if( cus_zipcode.value == "" || cus_zipAddress.value == "" || cus_detailAddress.value == ""){
+              cus_detailAddress.focus();
+              Swal.fire('주소를 입력해 주세요.', '','question')
+              return false; 
+          }
+
+          if( payment_method.value == "자동이체" ){
+              if( payment_bankName.value == "" ){
+                  payment_bankName.focus();
+                  Swal.fire('은행명을 입력해 주세요.', '','question')
+                  return false; 
+              }
+              if( payment_accountNumber.value == "" ){
+                  payment_accountNumber.focus();
+                  Swal.fire('계좌번호를 입력해 주세요.', '','question')
+                  return false; 
+              }
+              if( payment_accountHolder.value == "" ){
+                  payment_accountHolder.focus();
+                  Swal.fire('예금주를 입력해 주세요.', '','question')
+                  return false; 
+              }
+          }else if(payment_method.value == "카드" ){
+              if( payment_cardName.value == "" ){
+                  payment_cardName.focus();
+                  Swal.fire('카드사를 입력해 주세요.', '','question')
+                  return false; 
+              }
+              if( payment_cardNumber.value == "" ){
+                  payment_cardNumber.focus();
+                  Swal.fire('카드번호를 입력해 주세요.', '','question')
+                  return false; 
+              }
+              if( payment_expireYear.value == ""  || payment_expireMonth.value == "" ){
+                  payment_expireYear.focus();
+                  Swal.fire('유효기간을 입력해 주세요.', '','question')
+                  return false; 
+              }
+          }
+          if( additional_fileName.innerText == "선택된 파일 없음" ){
+              additional_fileName.focus();
+              Swal.fire('신분증 파일을 선택해 주세요.', '','question')
+              return false; 
+          }
+
+          if( gift_bankName.value == "" ){
+              gift_bankName.focus();
+              Swal.fire('사은품 입금 은행을 입력해 주세요.', '','question')
+              return false; 
+          }
+          if( gift_accounNumber.value == "" ){
+              gift_accounNumber.focus();
+              Swal.fire('사은품 입금 계좌를 입력해 주세요.', '','question')
+              return false; 
+          }
+          if( gift_accountHolder.value == "" ){
+              gift_accountHolder.focus();
+              Swal.fire('사은품 입금 예금주를 입력해 주세요.', '','question')
+              return false; 
+          }
+         
+          var form =  document.getElementById("form_join");
+
+          var hiddenField = document.createElement("input");
+          hiddenField.setAttribute("type", "hidden");
+          hiddenField.setAttribute("name", "product_provider");
+          hiddenField.setAttribute("value", "sk");
+          form.appendChild(hiddenField);
+
+          var hiddenField = document.createElement("input");
+          hiddenField.setAttribute("type", "hidden");
+          hiddenField.setAttribute("name", "product_internet");
+          hiddenField.setAttribute("value", "GIGA  인터넷 라이트(500M)");
+          form.appendChild(hiddenField);
+
+          var hiddenField = document.createElement("input");
+          hiddenField.setAttribute("type", "hidden");
+          hiddenField.setAttribute("name", "product_tv");
+          hiddenField.setAttribute("value", "");
+          form.appendChild(hiddenField);
+
+          var hiddenField = document.createElement("input");
+          hiddenField.setAttribute("type", "hidden");
+          hiddenField.setAttribute("name", "product_wifi");
+          hiddenField.setAttribute("value", "");
+          form.appendChild(hiddenField);
+
+          document.body.appendChild(form);
+          form.submit();
+      }
+      function popupOff(){
+          $("#termofuse").hide()
+      }
+      function showTerms(){
+          $("#termofuse").show()
+          window.scrollTo(0,0)
+      }
+  </script>
+  <!-- check and order -->
+  <style>
+      .join_outTable{ width: 1000px; background-color: #fff; border-radius: 20px; box-shadow: 0px 10px 10px 0 rgb(0 0 0 / 5%); }
+      .join_title{ font-size:36px; font-weight:bold; vertical-align: middle; }
+      .join_titleBelow{font-size:12px; font-weight:bold; vertical-align: middle; color: red;}
+      .join_form{padding: 50px 0 50px 0;}
+      .join_tr_height{height:20px}
+      .join_innerTable{width:550px; color: #808080;}
+      .join_innerTable_col1{width:100px;}
+      .join_clause{font-size:16px;}
+      .join_input_max{width:440px!important; margin:5px!important; font-size:16px!important; }
+      .join_input_1{text-align:right!important; width:148px!important; margin:5px!important; font-size:16px!important; padding-right:20px!important;}
+      .join_input_2{text-align:right!important; width:74px!important; margin: 5px 5px 5px 25px!important; font-size:16px!important; padding-right:20px!important;}
+      .join_input_3 {margin: 0 0 0 10px; font-size:16px;}
+      .join_input_4 {width:280px!important; margin:5px!important; font-size:16px!important; vertical-align: middle!important;}
+      .join_input_5 {width:147px!important; margin:5px!important; font-size:16px!important;}
+      .join_input_6 {border:0; width:147px; height:40px; background:#dfdfdf; border-radius:5px; font-size:16px; color:#a1a1a1; margin:5px; vertical-align: middle;}
+      .join_hr {width: 550px; margin: 30px; background-color: #fff; padding: 0; border: 0; border-top: 1px solid #afafaf; border-bottom: 1px solid #fff;}
+      .join_memo {width:440px; height:90px; margin:5px;}
+      .join_file_btn {display:inline-flex; align-items:center; justify-content:center; width:150px; height:40px; border-radius:4px; background:#f5f5fa; font-size:16px; font-family: 'Pretendard-Light'; color:#888; cursor:pointer; margin:5px}
+      .join_popup {display: none; background-color: #fff; box-shadow: 0px 0px 0px 1000px rgb(0 0 0 / 75%); position: absolute; top: 150px; left: 50%; transform: translate(-50%, 0%); width: 800px;}
+      @media only screen and (max-width:1100px) {
+          .join_outTable{ width: 800px; }
+      }
+
+      @media only screen and (max-width:900px) {
+          .join_outTable{ width: 700px; }
+          .join_title{ font-size:28px; }
+          .join_titleBelow{font-size:10px;}
+          .join_form{padding: 30px 0 30px 0;}
+          .join_innerTable{width:500px;}
+          .join_innerTable_col1{width:80px;}
+          .join_hr {width: 500px; margin: 20px; }
+          .join_popup{width: 700px;}
+      }
+
+      @media only screen and (max-width:800px) {
+          .join_outTable{ width: 600px; }
+          .join_popup{width: 600px;}
+      }
+
+      @media only screen and (max-width:650px) {
+          .join_outTable{ width: 400px; }
+          .join_form{padding: 20px 0 20px 0;}
+          .join_innerTable{width:350px;}
+          .join_innerTable_col1{width:55px;}
+          .join_clause{font-size:14px;}
+          .join_input_max{width:300px!important; font-size:14px!important; }
+          .join_input_1{width:90px!important; font-size:14px!important; padding-right:10px!important;}
+          .join_input_2{width:53px!important; font-size:14px!important; padding-right:10px!important; margin: 5px 5px 5px 15px!important;}
+          .join_input_3 {margin: 0 0 0 5px; font-size:14px;}
+          .join_input_4 {width:200px!important; font-size:14px!important;}
+          .join_input_5 {width:85px!important; margin:5px!important; font-size:14px!important;}
+          .join_input_6 {width:85px; font-size:14px;}
+          .join_hr {width: 360px;}
+          .join_memo {width:300px; height:70px;}
+          .join_file_btn {width:100px; height:40px;}
+          .join_popup{width: 400px;}
+      }
+  </style>
+  <div align="center" style="background-color: #f7f7f7;">	
+      <form enctype="multipart/form-data" id="form_join" name="form_join" method="post" class="join_form">
+          <input type="hidden" name="csrfmiddlewaretoken" value="Y2GMFJCsJD434mBd0Z8EerOWxapFQ93TjTCZ5wMaGZtzWOBixLHTWeS75m2MR7Xp">
+          <table class="join_outTable">
+              <tbody>
+                  <tr class="join_tr_height"></tr>
+                  <tr align="center">
+                      <td>
+                          <span class="join_title">인터넷 가입신청서</span>
+                          <br>
+                          <span class="join_titleBelow">하단에 입력한 정보가 정확하지 않을 경우 신청이 제한될 수 있습니다.</span>
+                      </td>
+                  </tr>
+                  <tr class="join_tr_height"></tr>
+                  <tr align="center">
+                      <td>
+                          <div>
+                              <table class="join_innerTable">
+                                  <colgroup><col class="join_innerTable_col1">
+                                  <col width="*">
+                                  </colgroup><tbody>
+                                      <tr>
+                                          <td><span class="join_clause">고객명</span></td>
+                                          <td>
+                                              <input type="text" name="cus_name" id="cus_name" class="join_input_max">
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                          <td><span class="join_clause">생년월일</span></td>
+                                          <td>
+                                              <input type="text" name="cus_birthYear" id="cus_birthYear" maxlength="4" onkeydown="onlyNumber();" class="join_input_1" placeholder="yyyy"><span class="join_input_3">년</span>
+                                              <input type="text" name="cus_birthMonth" id="cus_birthMonth" maxlength="2" onkeydown="onlyNumber();" class="join_input_2" placeholder="mm"><span class="join_input_3">월</span>
+                                              <input type="text" name="cus_birthDate" id="cus_birthDate" maxlength="2" onkeydown="onlyNumber();" class="join_input_2" placeholder="dd"><span class="join_input_3">일</span>
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                          <td><span class="join_clause">휴대폰</span></td>
+                                          <td>
+                                              <input type="text" name="cus_telPhone" id="cus_telPhone" maxlength="11" class="join_input_4" onkeydown="onlyNumber();" placeholder="숫자만 입력">
+                                              <select class="join_input_5" name="cus_tcom" id="cus_tcom">
+                                                  <option value="" selected="selected">통신사</option>
+                                                  <option value="LG">LG</option>
+                                                  <option value="LG알뜰">LG알뜰</option>
+                                                  <option value="SK">SK</option>
+                                                  <option value="SK알뜰">SK알뜰</option>
+                                                  <option value="KT">KT</option>
+                                                  <option value="KT알뜰">KT알뜰</option>
+                                              </select>
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                          <td><span class="join_clause">일반전화</span></td>
+                                          <td>
+                                              <input type="text" name="cus_homePhone" id="cus_homePhone" maxlength="11" class="join_input_max" onkeydown="onlyNumber();" placeholder="숫자만 입력">
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                          <td><span class="join_clause">이메일</span></td>
+                                          <td>
+                                              <input type="text" name="cus_email" id="cus_email" class="join_input_max"> 
+                                          </td>
+                                      </tr>
+                                      <tr style="vertical-align: text-top;">
+                                          <td><span class="join_clause">주소</span></td>
+                                          <td>
+                                              <input type="text" name="cus_zipcode" id="cus_zipcode" onclick="javascript:kakaopost()" class="join_input_4" readonly="">
+                                              <button type="button" name="zipcode_btn" onclick="javascript:kakaopost()" class="join_input_6">우편번호</button><br>
+                                              <input type="text" name="cus_zipAddress" id="cus_zipAddress" onclick="javascript:kakaopost()" class="join_input_max" readonly=""><br>
+                                              <input type="text" name="cus_detailAddress" id="cus_detailAddress" class="join_input_max">
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                        <td><span class="join_clause">설치일자</span></td>
+                                        <td><input type="text" id="datepicker" class="join_input_4"></td>
+                                      </tr>
+                                  </tbody>
+                              </table>
+                              
+                              <hr class="join_hr">
+
+                              <table class="join_innerTable">
+                                  <colgroup><col class="join_innerTable_col1">
+                                  <col width="*">
+                                  </colgroup><tbody>
+                                      <!-- script -->
+                                      <script>
+                                          $(document).ready(function(){
+                                              $("select[name=payment_method]").on("change", function(){
+                                                  console.log($(this).val())
+                                                  if($(this).val() == "자동이체"){
+                                                      $(".payment_bank").show()
+                                                      $(".payment_card").hide()
+                                                  }else if($(this).val() == "카드"){
+                                                      $(".payment_bank").hide()
+                                                      $(".payment_card").show()
+                                                  }
+                                              });
+                                          });
+                                      </script>
+                                      <!-- //script -->
+                                      <tr>
+                                          <td><span class="join_clause">납입방법</span></td>
+                                          <td>
+                                              <select name="payment_method" id="payment_method" style="width:200px; margin:5px; font-size:16px">
+                                                  <option value="자동이체">자동이체</option>
+                                                  <option value="카드">카드</option>
+                                              </select>
+                                          </td>
+                                      </tr>
+                                      <tr class="payment_bank">
+                                          <td><span class="join_clause">은행명</span></td>
+                                          <td>
+                                              <select style="width:200px; margin:5px; font-size:16px" name="payment_bankName" id="payment_bankName">
+                                                  <option value="" selected="selected">은행 선택</option>
+                                                  <option value="BC카드">BC카드</option>
+                                                  <option value="BNK투자증권">BNK투자증권</option>
+                                                  <option value="BOA은행">BOA은행</option>
+                                                  <option value="HSBC은행">HSBC은행</option>
+                                                  <option value="IBK투자증권">IBK투자증권</option>
+                                                  <option value="KB국민카드">KB국민카드</option>
+                                                  <option value="KB생명보험">KB생명보험</option>
+                                                  <option value="KB손해보험">KB손해보험</option>
+                                                  <option value="KB증권">KB증권</option>
+                                                  <option value="KEB하나은행">KEB하나은행</option>
+                                                  <option value="KTB투자증권">KTB투자증권</option>
+                                                  <option value="NH카드">NH카드</option>
+                                                  <option value="NH투자증권">NH투자증권</option>
+                                                  <option value="SC제일은행">SC제일은행</option>
+                                                  <option value="SK증권">SK증권</option>
+                                                  <option value="경남은행">경남은행</option>
+                                                  <option value="경찰청">경찰청</option>
+                                                  <option value="골든브릿지투자증권">골든브릿지투자증권</option>
+                                                  <option value="광주은행">광주은행</option>
+                                                  <option value="광주카드">광주카드</option>
+                                                  <option value="교보라이프플래닛생명">교보라이프플래닛생명</option>
+                                                  <option value="교보생명">교보생명</option>
+                                                  <option value="교보증권">교보증권</option>
+                                                  <option value="교통은행">교통은행</option>
+                                                  <option value="국민은행">국민은행</option>
+                                                  <option value="금융결제원">금융결제원</option>
+                                                  <option value="기술보증기금">기술보증기금</option>
+                                                  <option value="기업은행">기업은행</option>
+                                                  <option value="농협생명">농협생명</option>
+                                                  <option value="농협은행">농협은행</option>
+                                                  <option value="대구은행">대구은행</option>
+                                                  <option value="대신증권">대신증권</option>
+                                                  <option value="대화은행">대화은행</option>
+                                                  <option value="도이치은행">도이치은행</option>
+                                                  <option value="동부증권">동부증권</option>
+                                                  <option value="동부화재">동부화재</option>
+                                                  <option value="라이나생명">라이나생명</option>
+                                                  <option value="롯데카드">롯데카드</option>
+                                                  <option value="리딩투자증권">리딩투자증권</option>
+                                                  <option value="메리츠종합금융증권">메리츠종합금융증권</option>
+                                                  <option value="모건스탠리은행">모건스탠리은행</option>
+                                                  <option value="미래에셋대우">미래에셋대우</option>
+                                                  <option value="미래에셋생명">미래에셋생명</option>
+                                                  <option value="미쓰비시도쿄UFJ은행">미쓰비시도쿄UFJ은행</option>
+                                                  <option value="미즈호은행">미즈호은행</option>
+                                                  <option value="부국증권">부국증권</option>
+                                                  <option value="부산은행">부산은행</option>
+                                                  <option value="비엔피파리바은행">비엔피파리바은행</option>
+                                                  <option value="산림조합중앙회">산림조합중앙회</option>
+                                                  <option value="산업은행">산업은행</option>
+                                                  <option value="삼성생명">삼성생명</option>
+                                                  <option value="삼성선물">삼성선물</option>
+                                                  <option value="삼성증권">삼성증권</option>
+                                                  <option value="삼성카드">삼성카드</option>
+                                                  <option value="삼성화재">삼성화재</option>
+                                                  <option value="상호저축은행">상호저축은행</option>
+                                                  <option value="새마을금고중앙회">새마을금고중앙회</option>
+                                                  <option value="서울보증보험">서울보증보험</option>
+                                                  <option value="수출입은행">수출입은행</option>
+                                                  <option value="수협중앙회">수협중앙회</option>
+                                                  <option value="수협카드">수협카드</option>
+                                                  <option value="신영증권">신영증권</option>
+                                                  <option value="신용보증기금">신용보증기금</option>
+                                                  <option value="신한금융투자">신한금융투자</option>
+                                                  <option value="신한생명">신한생명</option>
+                                                  <option value="신한은행">신한은행</option>
+                                                  <option value="신한카드">신한카드</option>
+                                                  <option value="신협중앙회">신협중앙회</option>
+                                                  <option value="씨티카드">씨티카드</option>
+                                                  <option value="에이비엘생명">에이비엘생명</option>
+                                                  <option value="외환선물">외환선물</option>
+                                                  <option value="외환카드">외환카드</option>
+                                                  <option value="우리은행">우리은행</option>
+                                                  <option value="우리종합금융">우리종합금융</option>
+                                                  <option value="우리카드">우리카드</option>
+                                                  <option value="우체국">우체국</option>
+                                                  <option value="유안타증권">유안타증권</option>
+                                                  <option value="유진투자증권">유진투자증권</option>
+                                                  <option value="이베스트투자증권">이베스트투자증권</option>
+                                                  <option value="전북은행">전북은행</option>
+                                                  <option value="전북카드">전북카드</option>
+                                                  <option value="제이피모간체이스은행">제이피모간체이스은행</option>
+                                                  <option value="제주은행">제주은행</option>
+                                                  <option value="제주카드">제주카드</option>
+                                                  <option value="중국공상은행">중국공상은행</option>
+                                                  <option value="중국은행">중국은행</option>
+                                                  <option value="지역농축협">지역농축협</option>
+                                                  <option value="카카오뱅크">카카오뱅크</option>
+                                                  <option value="케이뱅크">케이뱅크</option>
+                                                  <option value="케이프투자증권">케이프투자증권</option>
+                                                  <option value="키움증권">키움증권</option>
+                                                  <option value="펀드온라인코리아">펀드온라인코리아</option>
+                                                  <option value="하나SK카드">하나SK카드</option>
+                                                  <option value="하나금융투자">하나금융투자</option>
+                                                  <option value="하이투자증권">하이투자증권</option>
+                                                  <option value="한국신용정보원">한국신용정보원</option>
+                                                  <option value="한국씨티은행">한국씨티은행</option>
+                                                  <option value="한국은행">한국은행</option>
+                                                  <option value="한국전자금융(주)">한국전자금융(주)</option>
+                                                  <option value="한국주택금융공사">한국주택금융공사</option>
+                                                  <option value="한국증권금융">한국증권금융</option>
+                                                  <option value="한국투자증권">한국투자증권</option>
+                                                  <option value="한양증권">한양증권</option>
+                                                  <option value="한화생명">한화생명</option>
+                                                  <option value="한화투자증권">한화투자증권</option>
+                                                  <option value="현대라이프생명">현대라이프생명</option>
+                                                  <option value="현대선물">현대선물</option>
+                                                  <option value="현대차투자증권">현대차투자증권</option>
+                                                  <option value="현대카드">현대카드</option>
+                                                  <option value="현대해상">현대해상</option>
+                                                  <option value="흥국생명">흥국생명</option>
+                                              </select>
+                                          </td>
+                                      </tr>
+                                      <tr class="payment_bank">
+                                          <td><span class="join_clause">계좌번호</span></td>
+                                          <td>
+                                              <input type="text" name="payment_accountNumber" id="payment_accountNumber" class="join_input_max" onkeydown="onlyNumber();" placeholder="숫자만 입력">
+                                          </td>
+                                      </tr>
+                                      <tr class="payment_bank">
+                                          <td><span class="join_clause">예금주</span></td>
+                                          <td>
+                                              <input type="text" name="payment_accountHolder" id="payment_accountHolder" class="join_input_max">
+                                          </td>
+                                      </tr>
+                                      <tr class="payment_card" style="display: none;">
+                                          <td><span class="join_clause">카드사</span></td>
+                                          <td>
+                                              <select style="width:200px; margin:5px; font-size:16px" name="payment_cardName" id="payment_cardName">
+                                                  <option value="" selected="selected">카드사 선택</option>
+                                                  <option value="BC카드">BC카드</option>
+                                                  <option value="국민카드">국민카드</option>
+                                                  <option value="삼성카드">삼성카드</option>
+                                                  <option value="LG카드">LG카드</option>
+                                                  <option value="외환카드">외환카드</option>
+                                                  <option value="신한카드">신한카드</option>
+                                                  <option value="롯데카드">롯데카드</option>
+                                                  <option value="현대카드">현대카드</option>
+                                                  <option value="한미카드">한미카드</option>
+                                                  <option value="NH카드">NH카드</option>
+                                                  <option value="우리카드">우리카드</option>
+                                                  <option value="하나카드">하나카드</option>
+                                                  <option value="씨티카드">씨티카드</option>
+                                                  <option value="경남카드">경남카드</option>
+                                                  <option value="기업카드">기업카드</option>
+                                                  <option value="대구카드">대구카드</option>
+                                                  <option value="부산카드">부산카드</option>
+                                                  <option value="SC제일카드">SC제일카드</option>
+                                                  <option value="제주카드">제주카드</option>
+                                                  <option value="수협카드">수협카드</option>
+                                                  <option value="전북카드">전북카드</option>
+                                                  <option value="광주카드">광주카드</option>
+                                                  <option value="카카오뱅크카드">카카오뱅크카드</option>
+                                              </select>
+                                          </td>
+                                      </tr>
+                                      <tr class="payment_card" style="display: none;">
+                                          <td><span class="join_clause">카드번호</span></td>
+                                          <td>
+                                              <input type="text" name="payment_cardNumber" id="payment_cardNumber" class="join_input_max" onkeydown="onlyNumber();" placeholder="숫자만 입력">
+                                          </td>
+                                      </tr>
+                                      <tr class="payment_card" style="display: none;">
+                                          <td><span class="join_clause">유효기간</span></td>
+                                          <td>
+                                              <select style="width:213px; margin:6px 5px 6px 5px; font-size:16px" name="payment_expireYear" id="payment_expireYear">
+                                                  <option value="" selected="selected">년도 선택</option>
+                                                  <option value="2022">2022년</option>
+                                                  <option value="2023">2023년</option>
+                                                  <option value="2024">2024년</option>
+                                                  <option value="2025">2025년</option>
+                                                  <option value="2026">2026년</option>
+                                                  <option value="2027">2027년</option>
+                                                  <option value="2028">2028년</option>
+                                                  <option value="2029">2029년</option>
+                                                  <option value="2030">2030년</option>
+                                                  <option value="2031">2031년</option>
+                                                  <option value="2032">2032년</option>
+                                                  <option value="2033">2033년</option>
+                                                  <option value="2034">2034년</option>
+                                                  <option value="2035">2035년</option>
+                                                  <option value="2036">2036년</option>
+                                                  <option value="2037">2037년</option>
+                                                  <option value="2038">2038년</option>
+                                                  <option value="2039">2039년</option>
+                                                  <option value="2040">2040년</option>
+                                              </select>
+                                              <select style="width:213px; margin:6px 5px 6px 5px;  font-size:16px" name="payment_expireMonth" id="payment_expireMonth">
+                                                  <option value="" selected="selected">월 선택</option>
+                                                  <option value="01">01월</option>
+                                                  <option value="02">02월</option>
+                                                  <option value="03">03월</option>
+                                                  <option value="04">04월</option>
+                                                  <option value="05">05월</option>
+                                                  <option value="06">06월</option>
+                                                  <option value="07">07월</option>
+                                                  <option value="08">08월</option>
+                                                  <option value="09">09월</option>
+                                                  <option value="10">10월</option>
+                                                  <option value="11">11월</option>
+                                                  <option value="12">12월</option>
+                                              </select>
+                                          </td>
+                                      </tr>
+                                      <!-- script -->
+                                      <script>
+                                          $(document).ready(function(){
+                                              $('input[type=file]').change(function(e){
+                                                  $(this).parent().find("#additional_fileName").text(e.target.files[0].name);
+                                              });
+                                          });
+                                      </script>
+                                      <!-- //script -->
+                                      <tr>
+                                          <td><span class="join_clause">신분증</span></td>
+                                          <td>
+                                              <div>
+                                                  <input type="file" name="addtional_file" id="addtional_file" style="display:none" accept=".jpg, .jpeg, .png, .pdf, .gif, .bmp">
+                                                  <label for="addtional_file">
+                                                      <span class="join_file_btn">파일 선택</span>
+                                                  </label>
+                                                  <span name="additional_fileName" id="additional_fileName" style="padding-left: 10px; font-size:12px;">선택된 파일 없음</span>
+                                              </div>
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                          <td><span class="join_clause">고객메모</span></td>
+                                          <td>
+                                              <textarea id="additional_memo" name="additional_memo" class="join_memo"></textarea>
+                                          </td>
+                                      </tr>
+                                  </tbody>
+                              </table>
+
+                              <hr class="join_hr">
+
+                              <div align="center" style="width:400px; font-size:26px; color: rgb(0, 0, 0); font-weight:bold; padding:10px 0 10px 20px;">사은품 입금계좌</div>
+                              <table class="join_innerTable">
+                                  <colgroup><col class="join_innerTable_col1">
+                                  <col width="*">
+                                  </colgroup><tbody>
+                                      <tr>
+                                          <td><span class="join_clause">은행명</span></td>
+                                          <td>
+                                              <select style="width:200px; margin:5px; font-size:16px" name="gift_bankName" id="gift_bankName">
+                                                  <option value="" selected="selected">은행 선택</option>
+                                                  <option value="BC카드">BC카드</option>
+                                                  <option value="BNK투자증권">BNK투자증권</option>
+                                                  <option value="BOA은행">BOA은행</option>
+                                                  <option value="HSBC은행">HSBC은행</option>
+                                                  <option value="IBK투자증권">IBK투자증권</option>
+                                                  <option value="KB국민카드">KB국민카드</option>
+                                                  <option value="KB생명보험">KB생명보험</option>
+                                                  <option value="KB손해보험">KB손해보험</option>
+                                                  <option value="KB증권">KB증권</option>
+                                                  <option value="KEB하나은행">KEB하나은행</option>
+                                                  <option value="KTB투자증권">KTB투자증권</option>
+                                                  <option value="NH카드">NH카드</option>
+                                                  <option value="NH투자증권">NH투자증권</option>
+                                                  <option value="SC제일은행">SC제일은행</option>
+                                                  <option value="SK증권">SK증권</option>
+                                                  <option value="경남은행">경남은행</option>
+                                                  <option value="경찰청">경찰청</option>
+                                                  <option value="골든브릿지투자증권">골든브릿지투자증권</option>
+                                                  <option value="광주은행">광주은행</option>
+                                                  <option value="광주카드">광주카드</option>
+                                                  <option value="교보라이프플래닛생명">교보라이프플래닛생명</option>
+                                                  <option value="교보생명">교보생명</option>
+                                                  <option value="교보증권">교보증권</option>
+                                                  <option value="교통은행">교통은행</option>
+                                                  <option value="국민은행">국민은행</option>
+                                                  <option value="금융결제원">금융결제원</option>
+                                                  <option value="기술보증기금">기술보증기금</option>
+                                                  <option value="기업은행">기업은행</option>
+                                                  <option value="농협생명">농협생명</option>
+                                                  <option value="농협은행">농협은행</option>
+                                                  <option value="대구은행">대구은행</option>
+                                                  <option value="대신증권">대신증권</option>
+                                                  <option value="대화은행">대화은행</option>
+                                                  <option value="도이치은행">도이치은행</option>
+                                                  <option value="동부증권">동부증권</option>
+                                                  <option value="동부화재">동부화재</option>
+                                                  <option value="라이나생명">라이나생명</option>
+                                                  <option value="롯데카드">롯데카드</option>
+                                                  <option value="리딩투자증권">리딩투자증권</option>
+                                                  <option value="메리츠종합금융증권">메리츠종합금융증권</option>
+                                                  <option value="모건스탠리은행">모건스탠리은행</option>
+                                                  <option value="미래에셋대우">미래에셋대우</option>
+                                                  <option value="미래에셋생명">미래에셋생명</option>
+                                                  <option value="미쓰비시도쿄UFJ은행">미쓰비시도쿄UFJ은행</option>
+                                                  <option value="미즈호은행">미즈호은행</option>
+                                                  <option value="부국증권">부국증권</option>
+                                                  <option value="부산은행">부산은행</option>
+                                                  <option value="비엔피파리바은행">비엔피파리바은행</option>
+                                                  <option value="산림조합중앙회">산림조합중앙회</option>
+                                                  <option value="산업은행">산업은행</option>
+                                                  <option value="삼성생명">삼성생명</option>
+                                                  <option value="삼성선물">삼성선물</option>
+                                                  <option value="삼성증권">삼성증권</option>
+                                                  <option value="삼성카드">삼성카드</option>
+                                                  <option value="삼성화재">삼성화재</option>
+                                                  <option value="상호저축은행">상호저축은행</option>
+                                                  <option value="새마을금고중앙회">새마을금고중앙회</option>
+                                                  <option value="서울보증보험">서울보증보험</option>
+                                                  <option value="수출입은행">수출입은행</option>
+                                                  <option value="수협중앙회">수협중앙회</option>
+                                                  <option value="수협카드">수협카드</option>
+                                                  <option value="신영증권">신영증권</option>
+                                                  <option value="신용보증기금">신용보증기금</option>
+                                                  <option value="신한금융투자">신한금융투자</option>
+                                                  <option value="신한생명">신한생명</option>
+                                                  <option value="신한은행">신한은행</option>
+                                                  <option value="신한카드">신한카드</option>
+                                                  <option value="신협중앙회">신협중앙회</option>
+                                                  <option value="씨티카드">씨티카드</option>
+                                                  <option value="에이비엘생명">에이비엘생명</option>
+                                                  <option value="외환선물">외환선물</option>
+                                                  <option value="외환카드">외환카드</option>
+                                                  <option value="우리은행">우리은행</option>
+                                                  <option value="우리종합금융">우리종합금융</option>
+                                                  <option value="우리카드">우리카드</option>
+                                                  <option value="우체국">우체국</option>
+                                                  <option value="유안타증권">유안타증권</option>
+                                                  <option value="유진투자증권">유진투자증권</option>
+                                                  <option value="이베스트투자증권">이베스트투자증권</option>
+                                                  <option value="전북은행">전북은행</option>
+                                                  <option value="전북카드">전북카드</option>
+                                                  <option value="제이피모간체이스은행">제이피모간체이스은행</option>
+                                                  <option value="제주은행">제주은행</option>
+                                                  <option value="제주카드">제주카드</option>
+                                                  <option value="중국공상은행">중국공상은행</option>
+                                                  <option value="중국은행">중국은행</option>
+                                                  <option value="지역농축협">지역농축협</option>
+                                                  <option value="카카오뱅크">카카오뱅크</option>
+                                                  <option value="케이뱅크">케이뱅크</option>
+                                                  <option value="케이프투자증권">케이프투자증권</option>
+                                                  <option value="키움증권">키움증권</option>
+                                                  <option value="펀드온라인코리아">펀드온라인코리아</option>
+                                                  <option value="하나SK카드">하나SK카드</option>
+                                                  <option value="하나금융투자">하나금융투자</option>
+                                                  <option value="하이투자증권">하이투자증권</option>
+                                                  <option value="한국신용정보원">한국신용정보원</option>
+                                                  <option value="한국씨티은행">한국씨티은행</option>
+                                                  <option value="한국은행">한국은행</option>
+                                                  <option value="한국전자금융(주)">한국전자금융(주)</option>
+                                                  <option value="한국주택금융공사">한국주택금융공사</option>
+                                                  <option value="한국증권금융">한국증권금융</option>
+                                                  <option value="한국투자증권">한국투자증권</option>
+                                                  <option value="한양증권">한양증권</option>
+                                                  <option value="한화생명">한화생명</option>
+                                                  <option value="한화투자증권">한화투자증권</option>
+                                                  <option value="현대라이프생명">현대라이프생명</option>
+                                                  <option value="현대선물">현대선물</option>
+                                                  <option value="현대차투자증권">현대차투자증권</option>
+                                                  <option value="현대카드">현대카드</option>
+                                                  <option value="현대해상">현대해상</option>
+                                                  <option value="흥국생명">흥국생명</option>
+                                              </select>
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                          <td><span class="join_clause">계좌번호</span></td>
+                                          <td>
+                                              <input type="text" name="gift_accounNumber" id="gift_accounNumber" class="join_input_max" onkeydown="onlyNumber();" placeholder="숫자만 입력">
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                          <td><span class="join_clause">예금주</span></td>
+                                          <td>
+                                              <input type="text" name="gift_accountHolder" id="gift_accountHolder" class="join_input_max">
+                                          </td>
+                                      </tr>
+                                  </tbody>
+                              </table>
+                              
+                              <hr class="join_hr">
+                              
+                              <table class="join_innerTable">
+                                  <colgroup><col width="70%">
+                                  <col width="*">
+                                  </colgroup><tbody>
+                                      <tr>
+                                          <td class="subdata" style="text-align:left;">
+                                              <div class="input_wrap">
+                                                  <input type="checkbox" name="add_agreement" id="add_agreement"><label for="add_agreement" style="display:inline-flex; vertical-align: middle;">[필수] 개인정보 수집 및 이용에 동의</label>	
+                                              </div>
+                                          </td>
+                                          <td style="text-align:right; cursor: pointer;">
+                                              <div>
+                                                  <a href="javascript:showTerms()"><span>내용보기</span></a>
+                                              </div>
+                                          </td>
+                                      </tr>
+                                  </tbody>
+                              </table>
+                              
+                          </div>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td align="center">
+                          <a href="javascript:checkNOrder()">
+                              <span style="width:250px; height:50px; display:inline-flex; align-items:center; justify-content:center; color:#fff; background:#2e3192; font-size:18px; font-family:'Pretendard-Medium'; border-radius: 10px; cursor:pointer; margin:40px 0 20px 0">신청하기</span>
+                          </a>
+                      </td>
+                  </tr>
+                  <tr style="height:10px"><td></td></tr>
+              </tbody>
+          </table>
+      </form>
+  </div>
+  <div id="termofuse" class="join_popup">
+      <div style="padding: 20px;">
+          본 신청서는 신청자(가입자, 납입자)가 직접 작성하였고, 신청자는 가입자 본인으로 본 신청서에 기재된 통장이체 또는 카드이체를 해당은행CMS 신청에 동의합니다.
+          <br>- 신청서 작성전 본 광고에 기재된 통신상품의 제반안내에 관하여 충분히 이해하였으며, 신청자가 신청한 개인정보를 영업자가 대행하여 해당 본사에 대행 접수하는 것에 동의합니다.
+          <br>※하단 개인정보 수집 동의 내용을 꼭 읽어보신 후 동의체크후 신청 바랍니다.
+          <br>
+          <br>[통신사 공통]
+          <br>* 위 사용료는 3년 약정 기준이며, 약정내 해지시 위약금이 청구 됩니다. 위약금에 대한 기준은 통신사마다 상이하여 자세한 부분은 아래 통신사별 안내사항에서 확인 바랍니다.
+          <br>* 개통 후 12개월 이내 신청상품 해지시 지급받은 현금 및 물품 사은품 전액 반환될 수 있고 자세한 내용은 각 통신사 고객센터에서 확인 바랍니다.
+          <br>* 개통 1개월 내로 정지, 변경, 해지 등 개통상태에 변경이 생기는 경우 사은품 전액 환수됩니다.
+          <br>* 기존 사용인터넷의 해지시 정상개통 확인후 고객 본인이 직접 해지하셔야 합니다.
+          <br>
+          <br>
+          <br>[SK]
+          <br>*위약금 산정 관련 문의는 SK 본사 고객센터로 문의해주시면 보다 정확한 금액을 확인하실 수 있습니다. (SKB: 106번, SKT: 114번) 위약금은 통신사, 신청상품, 결합 유형 등에 따라 차이가 있으므로 해지 전에는 반드시 고객센터를 통해 해지 시 위약금을 확인 바랍니다.
+          <br>*동일 장소 4개월 이내 해지접수건이 있을 경우 사은품 전액 환수되며 복지할인은 중복으로 불가능합니다.
+          <br>*SK 휴대폰 결합은 본사에서만 결합이 가능하오니 꼭 인터넷 설치 후 30일 이내에 SK 본사 고객센터 106번으로 결합신청 하시면 됩니다. (결합 시점부터 할인혜택 적용-결합유무 확인은 106번에서 가능합니다.) 결합 관련 문의는 SK 본사 고객센터로 문의해주시면 보다 상세하고 정확한 안내를 받으실 수 있습니다 (SKB: 106번, SKT: 114번)
+          <br>*명의 변경은 개통 후 1년 내로 명의 변경이 불가하며, 명의 변경 시 사은품은 전액 반환됩니다. 또한 동일 명의/동일 통신사를 이용중인 상품은 신규가입 후 1년이내 명의 변경, 일시정지, 해지할 경우 사은품 반환됩니다.
+          <br>*다회선 가입자의 경우 기존 사용회선 변경/정지/해지 등 변경은 10개월 이내로 불가하며, 위반시 사은품 전액 반환됩니다. 
+          <br>*기존에 사용하시던 인터넷은 꼭 설치받으신 후 직접 해지해 주셔야 합니다.
+          <br>
+          <br>[KT]
+          <br>*위약금 산정 관련 문의는 KT 본사 고객센터로 문의해주시면 보다 정확한 금액을 확인하실 수 있습니다. (KT 본사 고객센터 번호: 100번)
+          <br>*6개월(180일) 내 명의 변경은 불가능하며, 6개월 이내 명의 변경 시 사은품은 전액 반환 처리 됩니다.
+          <br>*미납,체납 중이신 고객님은 미납 및 체납 요금을 정산하신 후 접수 및 가입이 가능합니다.
+          <br>*가입 시 고객님의 개인 정보는 가입 여부 확인을 위한 신용 정보 조회(신용도에 지장 없습니다) 주소 이전, 결제 방법 변경, 장애 처리, 기사 출동 등의 중요 상황에 일부 활용됩니다.
+          <br>*기존 설치 된 주소지에서 해지 후 재가입을 하는 경우, 구 주소지에 있던 인터넷을 해지하신 후 신규 주소지(이사 후)로 명의 변경 및 재가입하시는 경우에도 사은품 전액 환수 처리됩니다.
+          <br>*1년 이내 해지하시거나 요금 미납하실 경우 사은품 환수에 대한 부분은 다소 상이할 수 있으며 또한 가입 취소 시 10일 이내 접수 불가 될 수 있사오니 자세한 안내는 KT 본사 고객센터(100번)으로 문의 바랍니다.
+          <br>*결합 관련 문의는 KT 본사 고객센터로 문의해주시면 보다 상세하고 정확한 안내를 받으실 수 있습니다. (KT 본사 고객센터: 100번)
+          <br>
+          <br>
+          <br>[LG]
+          <br>*위약금 산정 관련 문의는 LG U+ 본사 고객센터로 문의해주시면 보다 정확한 금액을 확인하실 수 있습니다. (101번 혹은 U+인터넷 전화 114번) 위약금은 통신사, 신청상품, 결합 유형 등에 따라 차이가 있으므로 해지전에는 반드시 고객센터를 통해 해지 시 위약금을 확인 바랍니다.
+          <br>*와이파이 필수조건입니다. (와이파이 미설치 불가/사용안하실 경우 따로 보관 가능합니다만 분실되지 않도록 주의 부탁드립니다)
+          <br>*기존에 사용하시던 인터넷은 꼭 설치받으신 후 직접 해지해주셔야 합니다.
+          <br>*LG 휴대폰 결합은 본사에서만 결합이 가능하오니 꼭 인터넷 설치 후 LG 본사 고객센터 101번으로 결합 신청하셔야 합니다. 결합 관련 문의 또한 LG 본사 고객센터로 문의 바랍니다.
+          <br>*개통 후 1년 이내 명의 변경/일시 정지, 자동이체 해지(지로변경) 시 사은품 전액 환수되오니 유의 바랍니다. 또한 개통 후 1년 이내 명의 변경 시 현금 사은품은 영업점으로 반납됩니다.
+          <br>*동일 장소/동일 명의/동일 통신사 3개월 이내 해지 이력이 있을시에는 결합 대표자 또는 가족 구성원 가족 결합 및 신규 가입이 불가능하며, 가입하시더라도 사은품 전액 환수됩니다 (결합관련 문의: 101번)
+          <br>*PC방, 게임장, 당구장, 숙박업소, 고시텔, 노래방, 유흥업소 등 해당 주소지에 속하는 업소는 접수 및 개통 불가합니다.
+          <br>* 개통전에 설치 장소에 동일 명의나 타인명의로 사용중인 장비가 남아 있을 경우, 기사님 내방 시 해지 후 재가입으로 판명되어 설치를 받지 않으시더라도 고객님께 환수금이 발생되오니 주의 바랍니다.
+          <br>*현재 설치된 주소에 해지 후 재가입 또는 이사고객이 이사 전 주소지에 해지하신 후 이사가셔서 신규 주소지에 재가입 및 명의 변경 후 재가입 시 사은품 전액 환수 됩니다.
+          <br>*개통 전 90일 이내 인터넷 해지 이력이 있거나 개통 후 결합 구성원(가족)의 기존회선 해지 등 해지 후 재가입일 경우 업체에 고지 없이 임의 개통 받으신 경우 사은품 금액 전액 환수 및 패널티 금액이 추가되어 환수되오니 주의 바랍니다.
+          <br>*LG 본사를 통한 가입진행건이 있으실 경우 접수가 불가합니다. 내용을 고지 없이 진행 후 개통하실 경우, 개통시 사은품이 전액 환수 됩니다.
+          <br>
+          <br>[개인정보 수집 동의서]
+          <br>* 수집 및 이용, 제공정보
+          <br>  - 성명, 생년월일, 휴대폰번호, 이메일, 주소, 자동이체 및 사은품 지급수령 계좌관련정보
+          <br>* 수집목적 - 본인인증, 접수내용 확인 서비스 제공 (약정기간동안 보관)
+          <br>* 위 내용은 원활한 서비스 가입, 이용상 필요하므로 미동의시 서비스 가입, 이용에 제약이 있을 수 있으며,
+          <br>* 가입자 본인을 확인하기 위한 절차로 본인인증이 필수입니다. 타인의 명의를 도용할 경우 사문서위조(형법 제23조)등
+          <br>  관련 법률에 의거하여 처벌을 받을 수 있습니다.
+          <br>* 신청상품의 유치대리점에서 고객식별, 본인확인, 서비스 가용확인, 서비스 제공매체결정, 고객상담, 유치, 상품소개,
+          <br>  기타 고객커뮤니케이션 등으로 활용되며, 서비스 이용을 원치 않을 경우 삭제요청이 가능합니다.
+      </div>
+      <div>
+          <a href="javascript:popupOff()">
+              <span style="width:100%; height:60px; display:inline-flex; align-items:center; justify-content:center; color:#fff; background:#2e3192; font-size:20px; font-family:'Pretendard-Medium'; cursor:pointer;">확인</span>
+          </a>
+      </div>
+  </div>
+
+  <!-- //block content -->
+  <!-- footer -->
+  <footer class="footer_pc">
+      <div id="footer_info_box">
+          <ul class="footer_info_title">
+              <li>다뜰</li><li>고객센터</li>
+          </ul>
+          <ul class="footer_info_content">
+              <li><a href="/termsofuse">서비스 이용약관</a></li><li>이메일 : daddle0325@gmail.com</li>
+              <li><a href="/privacypolicy">개인정보 처리방침</a></li><li>카카오톡 : @다뜰</li>
+          </ul>
+      </div>
+      <p>© Copyright <strong>2022 DADDLE.</strong> All Rights Reserved</p>
+  </footer>
+  <footer class="footer_m">
+      <div id="footer_info_box_m">
+          <ul>
+              <li class="footer_info_title_m">다뜰</li>
+              <li class="footer_info_content_m"><a href="/termsofuse">서비스 이용약관</a></li>
+              <li class="footer_info_content_m"><a href="/privacypolicy">개인정보 처리방침</a></li>
+          </ul>
+          <ul>
+              <li class="footer_info_title_m">고객센터</li>    
+              <li class="footer_info_content_m">이메일 : daddle0325@gmail.com</li>
+              <li class="footer_info_content_m">카카오톡 : @다뜰</li>
+          </ul>
+      </div>
+      <p>© Copyright <strong>2022 DADDLE.</strong> All Rights Reserved</p>
+  </footer>
+  <!-- //footer -->
+  <!-- kakao channeltalk -->
+  <!-- 
+  <div id="kakaoBtn"></div>
+  <script type="text/javascript">
+      Kakao.Channel.createChatButton({
+          container:'#kakaoBtn',
+          channelPublicId:'_bHTbb'
+      });
+  </script>
+  -->
+  <!-- //kakao channeltalk -->
+
+</body></html>
