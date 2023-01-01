@@ -1,2 +1,2 @@
 # Daddle-Test-Page
-Daddle test output page
+Daddle test product event image output page
